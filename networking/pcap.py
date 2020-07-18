@@ -4,7 +4,7 @@ import time
 
 class Pcap:
 
-    def __init__(self, filename, link_type=1):
+    def __init__(self, filename, link_type=1):                                          # we open and write in a file
         self.pcap_file = open(filename, 'wb')
         self.pcap_file.write(struct.pack('@ I H H i I I I', 0xa1b2c3d4, 2, 4, 0, 0, 65535, link_type))
 
