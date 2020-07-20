@@ -7,7 +7,7 @@ def get_mac_addr(mac_raw):
     return mac_addr
 
 
-# Formats multi-line data
+# Formats the multi-line data
 def format_multi_line(prefix, string, size=80):
     size -= len(prefix)
     if isinstance(string, bytes):
