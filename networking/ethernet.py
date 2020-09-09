@@ -6,7 +6,7 @@ from general import *
 class Ethernet:
 
     def __init__(self, raw_data):
-        dest, src, prototype = struct.unpack('! 6s 6s H', raw_data[:14])
+        dest, src, prototype = struct.unpack('! 6s 6s H', raw_data[:14])  #reads the header feom beginning to 14th character
 
         self.dest_mac = get_mac_addr(dest)
         self.src_mac = get_mac_addr(src)
